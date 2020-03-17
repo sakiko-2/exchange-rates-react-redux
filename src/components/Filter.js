@@ -22,7 +22,7 @@ const Filter = (props) => {
   };
 
   return (
-    <div className="container">
+    <div className={filterStyles.filter}>
       <div className="field">
         <p className="control has-icons-right">
           <input
@@ -37,7 +37,7 @@ const Filter = (props) => {
           </span>
         </p>
       </div>
-      <div className="has-text-centered">
+      <div className={`is-pulled-right ${filterStyles.sort}`}>
         {'Sort by '}
         <div className={`dropdown ${showDropdown}`}>
           <div className="dropdown-trigger">
@@ -46,15 +46,27 @@ const Filter = (props) => {
               aria-controls="dropdown-menu3"
               onClick={() => toggleDropdown()}
             >
-              <span className={filterStyles.sort}>{props.sortBy}</span>
+              <span className={filterStyles.sortBy}>{props.sortBy}</span>
             </a>
           </div>
-          <div className="dropdown-menu" id="dropdown-menu3" role="menu">
+          <div
+            className="dropdown-menu"
+            id="dropdown-menu3"
+            role="menu"
+          >
             <div className="dropdown-content">
-              <a href="#" className="dropdown-item" onClick={() => { props.sortByCurrency(); toggleDropdown() }}>
+              <a
+                href="#"
+                className="dropdown-item"
+                onClick={() => {props.sortByCurrency(); toggleDropdown()}}
+              >
                 Currency
               </a>
-              <a href="#" className="dropdown-item" onClick={() => { props.sortByRate(); toggleDropdown() }}>
+              <a
+                href="#"
+                className="dropdown-item"
+                onClick={() => {props.sortByRate(); toggleDropdown()}}
+              >
                 Rate
               </a>
             </div>
