@@ -10,6 +10,10 @@ class List extends Component {
     this.props.fetchData();
   }
 
+  formatNum(num) {
+    return num ? num.toLocaleString('en-US', {minimumFractionDigits: 4, maximumFractionDigits: 4}) : '-';
+  }
+
   render() {
     const { data, date, loading } = this.props;
 
@@ -31,7 +35,7 @@ class List extends Component {
               {data.map((item, i) => 
                 <tr key={i}>
                   <td>{item[0]}</td>
-                  <td>{item[1]}</td>
+                  <td>{this.formatNum(item[1])}</td>
                 </tr>
               )}
             </tbody>
