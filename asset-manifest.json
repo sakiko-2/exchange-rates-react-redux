@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/exchange-rates-react-redux/static/css/main.fbfa6016.chunk.css",
+    "main.js": "/exchange-rates-react-redux/static/js/main.c210bb85.chunk.js",
+    "main.js.map": "/exchange-rates-react-redux/static/js/main.c210bb85.chunk.js.map",
+    "runtime-main.js": "/exchange-rates-react-redux/static/js/runtime-main.620408c0.js",
+    "runtime-main.js.map": "/exchange-rates-react-redux/static/js/runtime-main.620408c0.js.map",
+    "static/css/2.aeed1b96.chunk.css": "/exchange-rates-react-redux/static/css/2.aeed1b96.chunk.css",
+    "static/js/2.25f81d8b.chunk.js": "/exchange-rates-react-redux/static/js/2.25f81d8b.chunk.js",
+    "static/js/2.25f81d8b.chunk.js.map": "/exchange-rates-react-redux/static/js/2.25f81d8b.chunk.js.map",
+    "index.html": "/exchange-rates-react-redux/index.html",
+    "precache-manifest.0b48a2d497b2e539d591089aaab18fe0.js": "/exchange-rates-react-redux/precache-manifest.0b48a2d497b2e539d591089aaab18fe0.js",
+    "service-worker.js": "/exchange-rates-react-redux/service-worker.js",
+    "static/css/2.aeed1b96.chunk.css.map": "/exchange-rates-react-redux/static/css/2.aeed1b96.chunk.css.map",
+    "static/css/main.fbfa6016.chunk.css.map": "/exchange-rates-react-redux/static/css/main.fbfa6016.chunk.css.map",
+    "static/js/2.25f81d8b.chunk.js.LICENSE.txt": "/exchange-rates-react-redux/static/js/2.25f81d8b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.620408c0.js",
+    "static/css/2.aeed1b96.chunk.css",
+    "static/js/2.25f81d8b.chunk.js",
+    "static/css/main.fbfa6016.chunk.css",
+    "static/js/main.c210bb85.chunk.js"
+  ]
+}
