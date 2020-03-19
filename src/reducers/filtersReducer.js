@@ -21,7 +21,7 @@ export default (state = defaultState, action) => {
       return {
         ...state,
         sortBy: 'rate',
-      }
+      };
     default:
       return state;
   }

@@ -4,7 +4,7 @@ const ratesDefaultState = {
   data: [],
   date: '',
   loading: true,
-}
+};
 
 export default (state = ratesDefaultState, action) => {
   switch (action.type) {

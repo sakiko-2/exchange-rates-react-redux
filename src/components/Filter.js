@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Search } from 'react-feather';
 import {
@@ -15,11 +16,13 @@ const Filter = (props) => {
 
   const toggleDropdown = () => {
     setDropdownState({ active: !dropdownState.active });
-  }
+  };
 
   const onTextChange = (e) => {
     props.setTextFilter(e.target.value);
   };
+
+  const { sortBy, text } = props;
 
   return (
     <div className={filterStyles.filter}>
@@ -30,7 +33,8 @@ const Filter = (props) => {
             type="text"
             placeholder="Search currency"
             onChange={(e) => onTextChange(e)}
-            value={props.text}
+            value={text}
+            aria-label="Search"
           />
           <span className="icon is-small is-right">
             <Search />
@@ -42,11 +46,12 @@ const Filter = (props) => {
         <div className={`dropdown ${showDropdown}`}>
           <div className="dropdown-trigger">
             <a
+              href="#!"
               aria-haspopup="true"
               aria-controls="dropdown-menu3"
               onClick={() => toggleDropdown()}
             >
-              <span className={filterStyles.sortBy}>{props.sortBy}</span>
+              <span className={filterStyles.sortBy}>{sortBy}</span>
             </a>
           </div>
           <div
@@ -56,16 +61,16 @@ const Filter = (props) => {
           >
             <div className="dropdown-content">
               <a
-                href="#"
+                href="#!"
                 className="dropdown-item"
-                onClick={() => {props.sortByCurrency(); toggleDropdown()}}
+                onClick={() => { props.sortByCurrency(); toggleDropdown(); }}
               >
                 Currency
               </a>
               <a
-                href="#"
+                href="#!"
                 className="dropdown-item"
-                onClick={() => {props.sortByRate(); toggleDropdown()}}
+                onClick={() => { props.sortByRate(); toggleDropdown(); }}
               >
                 Rate
               </a>
@@ -75,6 +80,18 @@ const Filter = (props) => {
       </div>
     </div>
   );
+};
+
+Filter.propTypes = {
+  setTextFilter: PropTypes.func.isRequired,
+  sortByCurrency: PropTypes.func.isRequired,
+  sortByRate: PropTypes.func.isRequired,
+  sortBy: PropTypes.string.isRequired,
+  text: PropTypes.string,
+};
+
+Filter.defaultProps = {
+  text: '',
 };
 
 const mapStateToProps = (state) => ({

@@ -1,13 +1,13 @@
-export const getFilteredList = (data, { sortBy, text }) => {
-  return data.filter((item) => (
-        (item[0] !== 'NZD') &&
-        (item[0].toLowerCase().includes(text.toLowerCase()))
-      ))
+/* eslint-disable import/prefer-default-export */
+export const getFilteredList = (data, { sortBy, text }) => (
+  data.filter((item) => (
+    (item[0] !== 'NZD')
+    && (item[0].toLowerCase().includes(text.toLowerCase()))
+  ))
     .sort((a, b) => {
-      if (sortBy === 'currency') {
-        return a[0] > b[0];
-      } else if (sortBy === 'rate') {
-        return a[1] > b[1];
+      if (sortBy === 'rate') {
+        return a[1] > b[1] ? 1 : -1;
       }
+      return a[0] > b[0] ? 1 : -1;
     })
-};
+);
