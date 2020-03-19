@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a1f3e1225ca52111ee50c3e433c1b647",
+    "revision": "15d92fb95eee1d86ade871d7160a740e",
     "url": "/exchange-rates-react-redux/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/exchange-rates-react-redux/static/css/2.aeed1b96.chunk.css"
   },
   {
-    "revision": "d566a83cd822963631bd",
-    "url": "/exchange-rates-react-redux/static/css/main.fbfa6016.chunk.css"
+    "revision": "54ac447bd2898c7f0f78",
+    "url": "/exchange-rates-react-redux/static/css/main.dbebdfe0.chunk.css"
   },
   {
     "revision": "2bbc728ced472f625ca7",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/exchange-rates-react-redux/static/js/2.25f81d8b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d566a83cd822963631bd",
-    "url": "/exchange-rates-react-redux/static/js/main.c210bb85.chunk.js"
+    "revision": "54ac447bd2898c7f0f78",
+    "url": "/exchange-rates-react-redux/static/js/main.6621b59f.chunk.js"
   },
   {
     "revision": "121c87c8d043717b39a0",
