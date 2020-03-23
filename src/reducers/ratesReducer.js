@@ -1,23 +1,19 @@
-import { LOADING, FETCH_SUCCESS } from '../actions/actionTypes';
+import { FETCH_SUCCESS } from '../actions/actionTypes';
 
-const ratesDefaultState = {
+const ratesInitialState = {
   data: [],
   date: '',
   loading: true,
 };
 
-export default (state = ratesDefaultState, action) => {
+export default (state = ratesInitialState, action) => {
   switch (action.type) {
-    case LOADING:
-      return {
-        ...state,
-        loading: action.loading,
-      };
     case FETCH_SUCCESS:
       return {
         ...state,
         data: Object.entries(action.data.rates),
         date: action.data.date,
+        loading: false,
       };
     default:
       return state;

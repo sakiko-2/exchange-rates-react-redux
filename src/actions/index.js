@@ -1,6 +1,7 @@
 import {
-  LOADING,
+  FETCH_REQUEST,
   FETCH_SUCCESS,
+  FETCH_FAILURE,
   SET_TEXT_FILTER,
   SORT_BY_CURRENCY,
   SORT_BY_RATE,
@@ -8,35 +9,40 @@ import {
 
 const URL = 'https://api.exchangeratesapi.io/latest?base=NZD';
 
-export const loading = (bool) => ({
-  type: LOADING,
-  loading: bool
+export const fetchRequest = () => ({
+  type: FETCH_REQUEST,
 });
 
 export const fetchSuccess = (data) => ({
   type: FETCH_SUCCESS,
-  data
+  loading: false,
+  data,
+});
+
+export const fetchFailure = (error) => ({
+  type: FETCH_FAILURE,
+  error,
 });
 
 export const fetchData = () => (dispatch) => {
+  dispatch(fetchRequest());
   fetch(URL)
     .then((response) => response.json())
     .then((responseData) => {
       dispatch(fetchSuccess(responseData));
-      dispatch(loading(false));
     })
-    .catch((error) => console.log('Error:', error ));
+    .catch((error) => dispatch(fetchFailure(error)));
 };
 
 export const setTextFilter = (text = '') => ({
   type: SET_TEXT_FILTER,
-  text
+  text,
 });
 
 export const sortByCurrency = () => ({
-  type: SORT_BY_CURRENCY
+  type: SORT_BY_CURRENCY,
 });
 
 export const sortByRate = () => ({
-  type: SORT_BY_RATE
+  type: SORT_BY_RATE,
 });

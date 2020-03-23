@@ -1,11 +1,11 @@
 import { SET_TEXT_FILTER, SORT_BY_CURRENCY, SORT_BY_RATE } from '../actions/actionTypes';
 
-const defaultState = {
+const filtersInitialtState = {
   text: '',
   sortBy: 'currency',
 };
 
-export default (state = defaultState, action) => {
+export default (state = filtersInitialtState, action) => {
   switch (action.type) {
     case SET_TEXT_FILTER:
       return {
