@@ -7,7 +7,7 @@ import {
   SORT_BY_RATE,
 } from './actionTypes';
 
-const URL = 'https://api.exchangeratesapi.io/latest?base=NZD';
+const URL = 'https://api.exchangerate.host/latest?base=NZD';
 
 export const fetchRequest = () => ({
   type: FETCH_REQUEST,
