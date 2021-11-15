@@ -12,10 +12,11 @@
   display: flex;
   flex: 1;
   justify-content: center;
+  align-items: flex-start;
 }
 
 .table {
-  width: 70%;
+  width: 35rem;
 }
 
 @media (max-width: 575.98px) {

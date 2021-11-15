@@ -14,7 +14,7 @@ class List extends Component {
   }
 
   formatNum(num) {
-    return num ? num.toLocaleString('en-US', { minimumFractionDigits: 4, maximumFractionDigits: 4 }) : '-';
+    return num ? num.toLocaleString('en-US', { minimumFractionDigits: 5, maximumFractionDigits: 5 }) : '-';
   }
 
   render() {
